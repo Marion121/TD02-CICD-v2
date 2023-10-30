@@ -2,8 +2,9 @@ name: Image
 
 on:
   workflow_run:
-    workflows: ["Test"]
-    branches: [master]
+    workflows: ['Test']
+    branches: 
+      - master
 
 jobs:
   build-and-push-docker-images:
