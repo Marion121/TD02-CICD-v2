@@ -19,9 +19,9 @@ jobs:
           distribution: 'adopt'
           java-version: 17
 
-      - name: Build and test with
+      - name: Build and test with maven
         working-directory: simple-api-student
-        run: mvn clean verify
+        run: mvn -B verify sonar:sonar -Dsonar.projectKey=devops-2023 -Dsonar.organization=devops-school -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}  --file ./simple-api/pom.xml
 
   build-and-push-docker-images:
     runs-on: ubuntu-22.04
