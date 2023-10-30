@@ -4,13 +4,10 @@ on:
   workflow_run:
     workflows: [CI devops 2023]
     types: [completed]
-  push:
     branches:
       - master
-  pull_request:
 jobs:
   build-and-push-docker-images:
-    if: ${{ github.event.workfrow_run.conclusion == 'success' }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
