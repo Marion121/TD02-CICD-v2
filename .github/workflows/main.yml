@@ -42,16 +42,18 @@ jobs:
         with:
           context: ./simple-api-student # Relative path to the source code with Dockerfile
           tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-simple-api:latest
+          push: ${{ github.ref == 'refs/heads/main' }}
 
       - name: Build and push database Docker image
         uses: docker/build-push-action@v3
         with:
           context: ./database # Relative path to the source code with Dockerfile
           tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-database:latest
+          push: ${{ github.ref == 'refs/heads/main' }}
 
       - name: Build and push httpd Docker image
         uses: docker/build-push-action@v3
         with:
           context: ./frontend  # Relative path to the source code with Dockerfile
           tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-httpd:latest
-
+          push: ${{ github.ref == 'refs/heads/main' }}
