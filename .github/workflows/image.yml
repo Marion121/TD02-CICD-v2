@@ -2,10 +2,10 @@ name: Image
 
 on:
   workflow_run:
-    workflows: [CI devops 2023]
+    workflows: [ CI devops 2023 ]
     types: [ completed ]
     branches:
-      - 'master'
+      - master
 jobs:
   build-and-push-docker-images:
     runs-on: ubuntu-22.04
