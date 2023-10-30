@@ -30,7 +30,7 @@ jobs:
       - name: Build and push database Docker image
         uses: docker/build-push-action@v3
         with:
-          context: ./sql  # Relative path to the source code with Dockerfile
+          context: ./database # Relative path to the source code with Dockerfile
           tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-database:latest
 
       - name: Build and push httpd Docker image
