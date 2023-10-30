@@ -1,10 +1,11 @@
-name: CI devops 2023
+name: Test
 
 on:
   push:
     branches:
       - master
       - develop
+
 jobs:
   test-backend:
     runs-on: ubuntu-22.04
