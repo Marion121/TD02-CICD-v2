@@ -3,7 +3,7 @@ name: CI devops 2023
 on:
   push:
     branches:
-      - master
+      - main
       - develop
   pull_request:
 jobs:

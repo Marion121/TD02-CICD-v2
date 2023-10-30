@@ -5,7 +5,7 @@ on:
     workflows: [ CI devops 2023 ]
     types: [ completed ]
     branches:
-      - master
+      - main
 jobs:
   build-and-push-docker-images:
     runs-on: ubuntu-22.04
