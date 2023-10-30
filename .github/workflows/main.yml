@@ -21,7 +21,7 @@ jobs:
 
       - name: Build and test with maven
         working-directory: simple-api-student
-        run: mvn -B verify sonar:sonar -Dsonar.projectKey=devops-2023 -Dsonar.organization=devops-school -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}  -f ./simple-api-student/pom.xml
+        run: mvn -B verify sonar:sonar -Dsonar.projectKey=devops-2023 -Dsonar.organization=devops-school -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}  
 
   build-and-push-docker-images:
     runs-on: ubuntu-22.04
