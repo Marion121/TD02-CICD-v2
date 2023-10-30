@@ -6,7 +6,7 @@ on:
     types: [completed]
   push:
     branches:
-      - main
+      - master
   pull_request:
 jobs:
   build-and-push-docker-images:
