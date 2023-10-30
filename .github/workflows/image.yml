@@ -1,6 +1,9 @@
-name: CI devops 2023
+name: Image
 
 on:
+  workflow_run:
+    workflows: [CI devops 2023]
+    types: [completed]
   push:
     branches:
       - main
