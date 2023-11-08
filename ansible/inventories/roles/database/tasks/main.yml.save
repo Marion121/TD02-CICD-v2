@@ -1,0 +1,5 @@
+- name: marionchineaud/docker-tp1-backend
+  docker_container:
+    name: httpd
+    image: jdoe/my-httpd:1.0
+

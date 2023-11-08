@@ -1,0 +1,7 @@
+- name: Run api
+  docker_container:
+    name: api3
+    image: marionchineaud/docker-tp1-backend:1.0.0
+    networks:
+      - name: "app_network"
+

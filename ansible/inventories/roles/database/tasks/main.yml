@@ -1,0 +1,10 @@
+- name: Run database
+  docker_container:
+    name: postgres
+    image: marionchineaud/docker-tp1-database:1.0.0
+    networks:
+      - name: "app_network"
+    env:
+      POSTGRES_DB=db
+      POSTGRES_USER=usr
+      POSTGRES_PASSWORD=pwd

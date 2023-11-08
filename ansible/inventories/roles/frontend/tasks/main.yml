@@ -1,0 +1,5 @@
+- name: Run frontend
+  docker_container:
+    name: frontend
+    image: marionchineaud/docker-tp1-httpd:1.0.0
+

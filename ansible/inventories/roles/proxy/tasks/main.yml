@@ -1,0 +1,7 @@
+- name: Run proxy
+  docker_container:
+    name: proxy
+    image: marionchineaud/docker-tp1-httpd:1.0.0
+    networks:
+      - name: "app_network"
+    ports: "80:80"
