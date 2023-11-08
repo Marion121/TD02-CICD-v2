@@ -220,40 +220,40 @@ Principales commandes ansible :
 
 ### Configuration des docker_container tasks 
 
-* Nettoie les paquets YUM sur le système cible : 
+Nettoie les paquets YUM sur le système cible : 
 ```
 - name: Clean packages
   command:
     cmd: yum clean -y packages
 ```
-* Installe le paquet "device-mapper-persistent-data" :
+Installe le paquet "device-mapper-persistent-data" :
 ```
 - name: Install device-mapper-persistent-data
   yum:
     name: device-mapper-persistent-data
     state: latest
 ```
-* Installe le paquet "lvm2" :
+Installe le paquet "lvm2" :
 ```
 - name: Install lvm2
   yum:
     name: lvm2
     state: latest
 ```
-* Ajoute le référentiel Docker au système :
+Ajoute le référentiel Docker au système :
 ```
 - name: add repo docker
   command:
     cmd: sudo yum-config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 ```
-* Installe le paquet "docker-ce" avec l'état "present", ce qui signifie que Docker sera installé s'il n'est pas déjà présent :
+Installe le paquet "docker-ce" avec l'état "present", ce qui signifie que Docker sera installé s'il n'est pas déjà présent :
 ```
 - name: Install Docker
   yum:
     name: docker-ce
     state: present
 ```
-* Assure que le service Docker est démarré :
+Assure que le service Docker est démarré :
 ```
 - name: Make sure Docker is running
   service: name=docker state=started
